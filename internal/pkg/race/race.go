@@ -96,6 +96,6 @@ func Tick(state *RaceState, trackLength float32, raceChannel chan RaceInfo) {
 		} else if rand.Float32() > 0.6 {
 			raceChannel <- RaceInfo{state.animal, fmt.Sprintf("%s has travelled %.2f km so far! Only %.2f km to the finish line! %s\n", state.animal.Name(), state.travelled, trackLength-state.travelled, FlavorText[rand.Intn(len(FlavorText))]), false, time.Now()}
 		}
-		time.Sleep(250 * time.Millisecond)
+		time.Sleep((time.Duration(250 + rand.Intn(250))) * time.Millisecond)
 	}
 }
