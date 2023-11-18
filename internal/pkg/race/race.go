@@ -16,6 +16,9 @@ var FlavorText = [...]string{
 	"Fairly impressive.",
 	"Not exactly a fan favorite.",
 	"Questionable, but the audience seems excited!",
+	"Nobody saw that coming!",
+	"A real shocker!",
+	"What a tense race this is!",
 }
 
 type RaceState struct {
