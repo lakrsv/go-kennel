@@ -32,7 +32,6 @@ type RaceInfo struct {
 }
 
 func Describe(track *track.Track) {
-	time.Now()
 	fmt.Println("Let the games begin!")
 	fmt.Println("--------------------")
 	fmt.Println("The participants are:")
@@ -52,7 +51,7 @@ func Race(track *track.Track) {
 	fmt.Println("GO!")
 	fmt.Println("--------------------")
 
-	state := make([]*RaceState, len(track.Participants()), len(track.Participants()))
+	state := make([]*RaceState, len(track.Participants()))
 	for i, animal := range track.Participants() {
 		state[i] = &RaceState{animal, animal.Speed(), 0}
 	}
