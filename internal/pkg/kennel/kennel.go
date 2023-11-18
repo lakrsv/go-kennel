@@ -16,7 +16,6 @@ func NewKennel(name string, capacity int) *Kennel {
 }
 
 func (k *Kennel) Add(animal *animal.Animal) error {
-	println(len(k.animals), cap(k.animals))
 	if len(k.animals) == cap(k.animals) {
 		return errors.New("Animals is full")
 	}
